@@ -1,0 +1,39 @@
+axel
+------------------------------------------
+Axel tries to accelerate HTTP/FTP downloading process by using multiple connections for one file. It can use multiple mirrors for a download. Axel has no dependencies and is lightweight, so it might be useful as a wget clone on byte-critical systems.
+
+Runtime requirements:
+  cygwin-1.7.5-1
+
+
+Build requirements:
+(besides corresponding -devel packages)
+  gettext-0.17-11
+  autoconf2.5-2.65-1
+  automake1.10-1.10.3-1
+  binutils-2.20.51-2
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-3
+  libtool-2.2.7a-15
+  make-3.81-2
+  pkg-config-0.23b-10
+
+
+Canonical website:
+  http://axel.alioth.debian.org/
+
+-------------------------------------------
+
+Build instructions:
+  # git clone https://github.com/ghuntley/cygwin-axel
+  # bash make.sh
+
+-------------------------------------------
+
+Port Notes:
+
+----- version 2.4-1 -----
+Version bump.
+
+Cygwin port maintained by:
+https://github.com/ghuntley/cygwin-axel
