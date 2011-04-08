@@ -1,16 +1,24 @@
 #!/bin/bash
-set -xv
+#set -xv
 ##################################
 ##  Buildfile for cygwin-axel   ##
 ##                              ##
 ##    Copyright 2011 ghuntley   ##
 ##################################
 #
+
+if [ $# -ne 1 ]
+then
+  echo "Usage: `basename $0` release-version"
+  exit 1
+fi
+
+
 export PROJHOME=`pwd`
 
 # remove previous release
-  git rm -f $PROJHOME/release/*.bz2
-  git rm -f $PROJHOME/release/md5.sum
+  rm $PROJHOME/release/*.bz2
+  rm $PROJHOME/release/md5.sum
 
 # create build structure 
   mkdir -p build
@@ -38,7 +46,7 @@ export PROJHOME=`pwd`
   cd src.submodule/trunk
   mkdir -p $PROJHOME/build/usr/share/doc
 
-  #make clean
+  make clean
   ./configure --prefix=$PROJHOME/build/usr \
       --etcdir=$PROJHOME/build/etc \
       --datadir=$PROJHOME/usr/share \
