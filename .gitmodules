@@ -1,0 +1,3 @@
+[submodule "src.submodule"]
+	path = src.submodule
+	url = git://github.com/ghuntley/axel.git
