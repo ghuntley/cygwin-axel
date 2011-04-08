@@ -63,7 +63,7 @@ export PROJHOME=`pwd`
 # Copy build instructions into release.
   export DEST=build/usr/share/doc/Cygwin
   mkdir -p $DEST
-  cp release/axel.README $DEST
+  cp $PROJHOME/release/axel.README $DEST
 
 # build binary release
   cd $PROJHOME/build
